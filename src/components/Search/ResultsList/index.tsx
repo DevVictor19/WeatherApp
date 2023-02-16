@@ -1,7 +1,9 @@
+import { City } from '../../../models/City';
+
 import StyledList from './styles';
 
 interface ResultsListProps {
-  results: string[];
+  results: City[];
 }
 
 function ResultsList(props: ResultsListProps) {
@@ -9,8 +11,8 @@ function ResultsList(props: ResultsListProps) {
 
   return (
     <StyledList>
-      {results.map((value) => (
-        <li key={value}>{value}</li>
+      {results.map((city) => (
+        <li key={city.id}>{city.name}</li>
       ))}
     </StyledList>
   );
